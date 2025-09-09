@@ -1,0 +1,491 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('http://localhost:3845/assets/f4c57cbbf43300ac48c8dd0184dcc4342516d377.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    filter: blur(2px);
+}
+
+.logo {
+    margin-bottom: 2rem;
+    z-index: 2;
+    position: relative;
+}
+
+.logo img {
+    max-width: 550px;
+    height: auto;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 6.5rem);
+    color: #0b44aa;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    z-index: 2;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Products Section */
+.products-section {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.decorative-products {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.sugar-products {
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    justify-items: center;
+}
+
+.sugar-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    position: relative;
+    width: 100%;
+    max-width: 230px;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 267px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sugar-card .product-image {
+    height: 157px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 7px 7px;
+}
+
+.sugar-card .product-label {
+    height: 35px;
+}
+
+.product-label.blue {
+    background-color: #0b44aa;
+}
+
+.product-label.red {
+    background-color: #fe3030;
+}
+
+.product-label span {
+    color: white;
+    font-weight: 500;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #0b44aa;
+    margin: 2rem 0;
+    font-weight: 500;
+}
+
+.learn-more {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.learn-more-btn {
+    background: white;
+    color: #005b30;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* USA Pride Section */
+.usa-pride {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.usa-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.usa-content h2 {
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    color: #be1f3b;
+    margin: 0;
+}
+
+.usa-flag {
+    width: 45px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 3rem 0;
+    background: #f8f9fa;
+}
+
+.certifications-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cert-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cert-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Sweetlife Logo */
+.sweetlife-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sweetlife-logo img {
+    max-width: 381px;
+    height: auto;
+    width: 100%;
+}
+
+.more-products-title {
+    text-align: center;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.contact-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact-text {
+    font-size: clamp(1.2rem, 2.5vw, 2.25rem);
+    color: #333;
+    line-height: 1.4;
+}
+
+.contact-btn {
+    display: block;
+    margin: 0 auto;
+    background: #fe3030;
+    color: white;
+    border: none;
+    padding: 1.5rem 4rem;
+    border-radius: 25px;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(254, 48, 48, 0.3);
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(254, 48, 48, 0.4);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        min-height: 80vh;
+        padding: 2rem 0;
+    }
+    
+    .logo img {
+        max-width: 240px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .sugar-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .product-card {
+        max-width: 120px;
+    }
+    
+    .product-image {
+        height: 114px;
+    }
+    
+    .sugar-card .product-image {
+        height: 80px;
+    }
+    
+    .product-label {
+        height: 19px;
+    }
+    
+    .sugar-card .product-label {
+        height: 21px;
+    }
+    
+    .product-label span {
+        font-size: 0.7rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        width: 21px;
+        height: 21px;
+    }
+    
+    .contact-text {
+        font-size: 0.9rem;
+    }
+    
+    .certifications-grid {
+        gap: 1rem;
+    }
+    
+    .cert-logo {
+        height: 50px;
+    }
+    
+    .usa-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .usa-flag {
+        width: 19px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .sugar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-card {
+        max-width: 100%;
+    }
+    
+    .contact-btn {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for images */
+.product-image img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus styles for accessibility */
+button:focus,
+.learn-more-btn:focus,
+.contact-btn:focus {
+    outline: 3px solid #0b44aa;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .product-label.blue {
+        background-color: #000080;
+    }
+    
+    .product-label.red {
+        background-color: #cc0000;
+    }
+}
