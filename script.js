@@ -17,34 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Learn More button functionality
+    // Learn More button functionality - now links to main website
     const learnMoreBtn = document.querySelector('.learn-more-btn');
     if (learnMoreBtn) {
-        learnMoreBtn.addEventListener('click', function() {
-            // Scroll to sugar products section
-            const sugarSection = document.querySelector('.sugar-products');
-            if (sugarSection) {
-                sugarSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+        // No need for click handler since it's now a direct link
+        console.log('Learn More button links to main Amerikoa website');
     }
 
-    // Contact button functionality
+    // Contact button functionality - now links to contact page
     const contactBtn = document.querySelector('.contact-btn');
     if (contactBtn) {
-        contactBtn.addEventListener('click', function() {
-            // Scroll to contact section
-            const contactSection = document.querySelector('.contact');
-            if (contactSection) {
-                contactSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+        // No need for click handler since it's now a direct link
+        console.log('Contact button links to Amerikoa contact page');
     }
 
     // Product card hover effects enhancement
@@ -125,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add loading states
     function addLoadingStates() {
-        const buttons = document.querySelectorAll('button');
+        const buttons = document.querySelectorAll('button, .learn-more-btn, .contact-btn');
         buttons.forEach(button => {
             button.addEventListener('click', function() {
                 this.style.opacity = '0.7';
