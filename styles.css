@@ -12,91 +12,6 @@ body {
     background-color: #fff;
 }
 
-/* Sprinkle Frame Background */
-.sprinkle-frame {
-    position: relative;
-    min-height: 100vh;
-    padding: 128px;
-}
-
-/* Top edge */
-.sprinkle-frame::before {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 128px; 
-    right: 128px;
-    height: 128px;
-    background: url('assets/background/sprinkle_top_edge.png') repeat-x;
-    z-index: 1;
-}
-
-/* Bottom edge */
-.sprinkle-frame::after {
-    content: "";
-    position: absolute;
-    bottom: 0; 
-    left: 128px; 
-    right: 128px;
-    height: 128px;
-    background: url('assets/background/sprinkle_bottom_edge.png') repeat-x;
-    z-index: 1;
-}
-
-/* Left & right edges */
-.sprinkle-frame .left-edge,
-.sprinkle-frame .right-edge {
-    content: "";
-    position: absolute;
-    top: 128px; 
-    bottom: 128px;
-    width: 128px;
-    background-repeat: repeat-y;
-    z-index: 1;
-}
-
-.sprinkle-frame .left-edge {
-    left: 0;
-    background-image: url('assets/background/sprinkle_left_edge.png');
-}
-
-.sprinkle-frame .right-edge {
-    right: 0;
-    background-image: url('assets/background/sprinkle_right_edge.png');
-}
-
-/* Corners */
-.sprinkle-frame .corner {
-    position: absolute; 
-    width: 128px; 
-    height: 128px;
-    background-size: cover;
-    z-index: 1;
-}
-
-.sprinkle-frame .tl { 
-    top: 0; 
-    left: 0; 
-    background-image: url('assets/background/sprinkle_top_left_corner.png'); 
-}
-
-.sprinkle-frame .tr { 
-    top: 0; 
-    right: 0; 
-    background-image: url('assets/background/sprinkle_top_right_corner.png'); 
-}
-
-.sprinkle-frame .bl { 
-    bottom: 0; 
-    left: 0; 
-    background-image: url('assets/background/sprinkle_bottom_left_corner.png'); 
-}
-
-.sprinkle-frame .br { 
-    bottom: 0; 
-    right: 0; 
-    background-image: url('assets/background/sprinkle_bottom_right_corner.png'); 
-}
 
 .container {
     max-width: 1200px;
@@ -113,7 +28,7 @@ h1, h2, h3 {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,6 +36,21 @@ h1, h2, h3 {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     overflow: hidden;
     z-index: 2;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('assets/bc-half-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.55;
+    z-index: -1;
 }
 
 
@@ -428,29 +358,6 @@ h1, h2, h3 {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
-    .sprinkle-frame {
-        padding: 64px 32px;
-    }
-    
-    .sprinkle-frame::before,
-    .sprinkle-frame::after {
-        left: 32px;
-        right: 32px;
-        height: 64px;
-    }
-    
-    .sprinkle-frame .left-edge,
-    .sprinkle-frame .right-edge {
-        top: 64px;
-        bottom: 64px;
-        width: 32px;
-    }
-    
-    .sprinkle-frame .corner {
-        width: 32px;
-        height: 64px;
-    }
-    
     .container {
         padding: 0 15px;
     }
@@ -536,28 +443,6 @@ h1, h2, h3 {
 }
 
 @media (max-width: 480px) {
-    .sprinkle-frame {
-        padding: 32px 16px;
-    }
-    
-    .sprinkle-frame::before,
-    .sprinkle-frame::after {
-        left: 16px;
-        right: 16px;
-        height: 32px;
-    }
-    
-    .sprinkle-frame .left-edge,
-    .sprinkle-frame .right-edge {
-        top: 32px;
-        bottom: 32px;
-        width: 16px;
-    }
-    
-    .sprinkle-frame .corner {
-        width: 16px;
-        height: 32px;
-    }
     
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
