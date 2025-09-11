@@ -256,11 +256,13 @@ h1, h2, h3 {
 }
 
 .certifications-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .cert-logo {
@@ -428,11 +430,30 @@ h1, h2, h3 {
     }
     
     .certifications-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+        max-width: 400px;
+        align-items: center;
+        justify-items: center;
     }
     
     .cert-logo {
         height: 50px;
+    }
+    
+    .cert-logo:nth-child(4),
+    .cert-logo:nth-child(5) {
+        grid-column: span 1;
+    }
+    
+    .cert-logo:nth-child(4) {
+        justify-self: end;
+        margin-right: -2.5rem;
+    }
+    
+    .cert-logo:nth-child(5) {
+        justify-self: end;
+        margin-left: 5.5rem;
     }
     
     .usa-content {
@@ -441,8 +462,9 @@ h1, h2, h3 {
     }
     
     .usa-flag {
-        width: 19px;
-        height: 18px;
+        width: 60px;
+        height: 56px;
+        margin-bottom: 1rem;
     }
 }
 
