@@ -363,12 +363,16 @@ h1, h2, h3 {
     }
     
     .hero {
-        min-height: 70vh;
-        padding: 2rem 0;
+        min-height: 100vh;
+        padding: 4rem 1rem;
+    }
+    
+    .hero::before {
+        background-image: url('assets/bc-mobile-background.png');
     }
     
     .logo img {
-        max-width: 240px;
+        max-width: 340px;
     }
     
     .products-grid {
