@@ -17,12 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Learn More button functionality - now links to main website
-    const learnMoreBtn = document.querySelector('.learn-more-btn');
-    if (learnMoreBtn) {
-        // No need for click handler since it's now a direct link
-        console.log('Learn More button links to main Amerikoa website');
-    }
 
     // Contact button functionality - now links to contact page
     const contactBtn = document.querySelector('.contact-btn');
@@ -109,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add loading states
     function addLoadingStates() {
-        const buttons = document.querySelectorAll('button, .learn-more-btn, .contact-btn');
+        const buttons = document.querySelectorAll('button, .contact-btn');
         buttons.forEach(button => {
             button.addEventListener('click', function() {
                 this.style.opacity = '0.7';

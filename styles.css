@@ -198,30 +198,6 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
-.learn-more {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.learn-more-btn {
-    background: white;
-    color: #005b30;
-    border: none;
-    padding: 1rem 3rem;
-    border-radius: 25px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-decoration: none;
-    display: inline-block;
-}
-
-.learn-more-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
 
 /* USA Pride Section */
 .usa-pride {
@@ -249,31 +225,15 @@ h1, h2, h3 {
     object-fit: contain;
 }
 
-/* Certifications Section */
-.certifications {
-    padding: 3rem 0;
-    background: #f8f9fa;
-}
-
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cert-logo {
-    height: 80px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.cert-logo:hover {
-    transform: scale(1.1);
+/* Now Featuring Section */
+.now-featuring {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Sweetlife Logo */
@@ -366,15 +326,16 @@ h1, h2, h3 {
     
     .hero {
         min-height: 100vh;
-        padding: 4rem 1rem;
+        padding: 3rem 1rem;
     }
     
     .hero::before {
         background-image: url('assets/bc-mobile-background.png');
+        transform: translateY(-150px);
     }
     
     .logo img {
-        max-width: 340px;
+        max-width: 440px;
     }
     
     .products-grid {
@@ -429,32 +390,6 @@ h1, h2, h3 {
         font-size: 0.9rem;
     }
     
-    .certifications-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        max-width: 400px;
-        align-items: center;
-        justify-items: center;
-    }
-    
-    .cert-logo {
-        height: 50px;
-    }
-    
-    .cert-logo:nth-child(4),
-    .cert-logo:nth-child(5) {
-        grid-column: span 1;
-    }
-    
-    .cert-logo:nth-child(4) {
-        justify-self: end;
-        margin-right: -2.5rem;
-    }
-    
-    .cert-logo:nth-child(5) {
-        justify-self: end;
-        margin-left: 5.5rem;
-    }
     
     .usa-content {
         flex-direction: column;
@@ -523,7 +458,6 @@ html {
 
 /* Focus styles for accessibility */
 button:focus,
-.learn-more-btn:focus,
 .contact-btn:focus {
     outline: 3px solid #0b44aa;
     outline-offset: 2px;
