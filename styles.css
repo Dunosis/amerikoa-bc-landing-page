@@ -12,6 +12,32 @@ body {
     background-color: #fff;
 }
 
+<<<<<<< Updated upstream
+=======
+/* Sprinkle Border Container */
+.sprinkle-border {
+    position: relative;
+    min-height: 100vh;
+    border-radius: 16px;
+    overflow: hidden; /* ensures sprinkles don't bleed out of rounded corners */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin: 0px;
+}
+
+.sprinkle-content {
+    position: relative;
+    z-index: 1;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.sprinkle-svg {
+    position: absolute; 
+    inset: 0;
+    width: 100%; 
+    height: 100%;
+    display: block;
+}
+>>>>>>> Stashed changes
 
 .container {
     max-width: 1200px;
@@ -33,7 +59,10 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
+<<<<<<< Updated upstream
     background: #e9edee;
+=======
+>>>>>>> Stashed changes
     overflow: hidden;
     z-index: 2;
 }
@@ -56,6 +85,7 @@ h1, h2, h3 {
 
 .logo {
     margin-bottom: 2rem;
+    margin-top: 50px;
     z-index: 2;
     position: relative;
 }
@@ -320,6 +350,18 @@ h1, h2, h3 {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
+<<<<<<< Updated upstream
+=======
+    .sprinkle-border {
+        margin: 10px;
+        border-radius: 12px;
+    }
+    
+    .sprinkle-content {
+        padding: clamp(0.5rem, 2vw, 1.5rem);
+    }
+    
+>>>>>>> Stashed changes
     .container {
         padding: 0 15px;
     }
@@ -404,6 +446,17 @@ h1, h2, h3 {
 }
 
 @media (max-width: 480px) {
+<<<<<<< Updated upstream
+=======
+    .sprinkle-border {
+        margin: 5px;
+        border-radius: 8px;
+    }
+    
+    .sprinkle-content {
+        padding: clamp(0.25rem, 1.5vw, 1rem);
+    }
+>>>>>>> Stashed changes
     
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
